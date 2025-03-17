@@ -34,4 +34,15 @@ public class ProductService implements ProductServiceI{
 		}
 	}
 
+	public ResponseEntity<List<Products>> filterproduct(String filter) {
+		List<Products> list=dao.filterpro(filter);
+		if(list.size()!=0)
+		{
+			return new ResponseEntity<List<Products>>(list,HttpStatus.FOUND);
+		}
+		else {
+			throw new ProductException("not found");
+		}
+	}
+
 }

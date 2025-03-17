@@ -11,5 +11,6 @@ public interface ProductServiceI {
 	public ResponseEntity<Products> insert(Products products);
 	
 	public ResponseEntity<List<Products>> getAll();
+	public ResponseEntity<List<Products>> filterproduct(String filter);
 
 }

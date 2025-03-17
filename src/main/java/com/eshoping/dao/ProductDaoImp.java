@@ -24,5 +24,10 @@ public class ProductDaoImp implements Product{
 		
 		return repo.findAll();
 	}
+	@Override
+	public List<Products> filterpro(String filter) {
+		
+		return repo.getByNameOrBrandOrCategory(filter);
+	}
 
 }

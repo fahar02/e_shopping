@@ -8,6 +8,6 @@ public interface Product {
 	
 	public Products saveProducts(Products products);
 	List<Products> getProducts();
-	
+	public List<Products> filterpro(String filter);
 
 }
