@@ -23,6 +23,10 @@ public class CustomerExceptionHandler {
 		 
 		return new ResponseEntity<String>(customer.getMessage(),HttpStatus.BAD_REQUEST);
 	}
-	
+	@ExceptionHandler(ProductException.class)
+	private ResponseEntity<String> handlingProductDetailsException(ProductException pe)
+	{
+		return new ResponseEntity<String>(pe.getMessage(),HttpStatus.NOT_FOUND);
+	}
 
 }
